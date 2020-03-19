@@ -1,0 +1,26 @@
+{
+  "name": "directory-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "ELEVENTY_ENV=development npx eleventy --serve",
+    "production": "npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hankchizljaw/directory-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hankchizljaw/directory-site/issues"
+  },
+  "homepage": "https://github.com/hankchizljaw/directory-site#readme"
+}

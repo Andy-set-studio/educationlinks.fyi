@@ -1,0 +1,49 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <main>
+    <h1>{{ title }}</h1>
+    
+    <h2>Categories</h2>
+    {% for tag in categories.tags %}
+      {% set collection = collections[tag.slug] %}
+
+      {% if collection.length %}
+        <article>
+          <h3>{{ tag.title }}</h3>
+          <ul>
+            {% for item in collections[tag.slug] %}
+              <li>
+                {% set cardTitle = item.data.title %}
+                {% set cardSummary = item.data.summary %}
+                {% set cardLink = item.data.link %}
+                {% include "partials/card.njk" %}
+              </li>  
+            {% endfor %}
+          </ul>
+        </article>
+      {% endif %}
+    {% endfor %}
+    
+    <h2>Age Groups</h2>
+    {% for age in categories.ages %}
+      {% set collection = collections[age.slug] %}
+
+      {% if collection.length %}
+        <article>
+          <h3>{{ age.title }}</h3>
+          <ul>
+            {% for item in collections[age.slug] %}
+              <li>
+                {% set cardTitle = item.data.title %}
+                {% set cardSummary = item.data.summary %}
+                {% set cardLink = item.data.link %}
+                {% include "partials/card.njk" %}
+              </li>  
+            {% endfor %}
+          </ul>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </main>
+{% endblock %}
