@@ -1,0 +1,49 @@
+---
+title: 'Category Archive'
+pagination:
+  data: collections
+  size: 1 
+  alias: tag
+  filter:
+    - all
+    - nav
+    - item 
+    - tagList
+  addAllPagesToCollections: true
+permalink: /category/{{ tag }}/
+---
+
+{% extends 'layouts/base.njk' %}
+
+{# Post list content #}
+{% set items = collections[tag] %}
+
+{% block content %}
+{% set homepage = collections.homepage %}
+  <main>
+    <div class="[ wrapper ] [ flow ]">
+      <article class="flow">
+        <h1>
+          <a href="/">{{ homepage.data.title }}</a>
+        </h1>
+        {{ homepage.templateContent | safe }}
+      </article>
+      <h2>Items filed under “{{ helpers.getCategory(tag).title }}”</h2>
+      <p>You are viewing items from the “{{ helpers.getCategory(tag).title }}” category. <a href="/">See all categories here</a>.</p>
+      <ul class="auto-grid">
+        {% for item in items %}
+          <li>
+            {% set cardTitle = item.data.title %}
+            {% set cardSummary = item.data.summary %}
+            {% set cardLink = item.data.link %}
+            {% set cardPermalink = item.url %}
+            {% set cardHeadingLevel = 'h3' %}
+            {% include "partials/card.njk" %}
+          </li>  
+        {% endfor %}
+      </ul>
+      <hr />
+      <a href="/">Back to all items</a>
+    </div>
+  </main>
+{% endblock %}

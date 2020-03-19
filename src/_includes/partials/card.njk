@@ -1,5 +1,8 @@
+{% if not cardHeadingLevel %}
+  {% set cardHeadingLevel = 'h4' %}
+{% endif %}
 <article class="card">
-  <h4><a href="{{ cardLink }}" rel="external">{{ cardTitle }}</a></h4>
+  <{{ cardHeadingLevel }} class="card__heading"><a href="{{ cardLink }}" rel="external">{{ cardTitle }}</a></{{ cardHeadingLevel }}>
   <p>{{ cardSummary }}</p>
   <p><a href="{{ cardPermalink }}">Further information</a></p>
 </article>

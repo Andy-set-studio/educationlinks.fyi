@@ -12,7 +12,9 @@
 
       {% if collection.length %}
         <article class="reel">
-          <h3>{{ tag.title }}</h3>
+          <h3>
+            <a href="/category/{{ tag.slug }}">{{ tag.title }}</a>
+          </h3>
           <ul class="reel__list">
             {% for item in collections[tag.slug] %}
               <li class="reel__item">
@@ -34,7 +36,9 @@
 
       {% if collection.length %}
         <article class="reel">
-          <h3>{{ age.title }}</h3>
+          <h3>
+            <a href="/category/{{ age.slug }}">{{ age.title }}</a>
+          </h3>
           <ul class="reel__list">
             {% for item in collections[age.slug] %}
               <li class="reel__item">
