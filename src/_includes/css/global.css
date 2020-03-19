@@ -70,6 +70,10 @@ h2 ~ h2 {
   --metric-flow-space: var(--step-4);
 }
 
+.reel ~ .reel {
+  --metric-flow-space: var(--step-3);
+}
+
 /**
  * Reel component 
  */

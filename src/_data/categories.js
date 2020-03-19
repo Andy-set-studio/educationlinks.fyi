@@ -5,6 +5,10 @@ module.exports = {
       slug: 'education'
     },
     {
+      title: 'Learn To Code',
+      slug: 'learn-to-code'
+    },
+    {
       title: 'Fun',
       slug: 'fun'
     },
