@@ -15,7 +15,7 @@ Clone this repo and then run `npm install`.
 
 ## Contributing 
 
-Contributions of **all kinds** will be much appreciated. Please [mailto:me@andy-bell.design](email me) if you want to be part of the admin team to help keep this thing running.
+Contributions of **all kinds** will be much appreciated. Please [email me](mailto:me@andy-bell.design) if you want to be part of the admin team to help keep this thing running.
 
 ### To add content
 
