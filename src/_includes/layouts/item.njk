@@ -1,7 +1,13 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <article>
-    <h1>{{ title }}</h1>
-  </article>
+  <main>
+    <article class="flow">
+      <h1>{{ title }}</h1>
+      <p>{{ summary }}</p>
+      <p><a href="{{ link }}">Direct link</a></p>
+      <hr />
+      <a href="/">Back to all items</a>
+    </article>
+  </main>
 {% endblock %}

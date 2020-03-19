@@ -16,6 +16,7 @@
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
                 {% set cardLink = item.data.link %}
+                {% set cardPermalink = item.url %}
                 {% include "partials/card.njk" %}
               </li>  
             {% endfor %}
@@ -37,6 +38,7 @@
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
                 {% set cardLink = item.data.link %}
+                {% set cardPermalink = item.url %}
                 {% include "partials/card.njk" %}
               </li>  
             {% endfor %}
