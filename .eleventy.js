@@ -1,6 +1,3 @@
-// Import data files
-// const site = require('./src/_data/site.json');
-
 module.exports = config => {
   return {
     dir: {
