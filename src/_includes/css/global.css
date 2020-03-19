@@ -4,11 +4,12 @@
 }
 
 body {
-  background: #efefef;
-  color: #252525;
+  background-color: #003f62;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23006095' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
   font-size: 1.1rem;
   font-size: var(--step-0);
   line-height: 1.4;
@@ -54,6 +55,7 @@ h1 {
 
 h2 {
   font-size: var(--step-3);
+  color: #ffbc42;
 }
 
 h3 {
@@ -95,6 +97,7 @@ h2 ~ h2 {
 .reel__heading a {
   font-size: 1rem;
   font-weight: 500;
+  color: #fbcbdc;
 }
 
 [lang*='en'] .reel__heading a {
@@ -136,9 +139,11 @@ h2 ~ h2 {
 .card {
   display: block;
   height: 100%;
-  border: 1px solid #cccccc;
+  border: 1px solid #003f62;
+  border-radius: 0.25rem;
   padding: 1rem;
-  background: #f3f3f3;
+  background: #f9f9f9;
+  color: #b90f4c;
 }
 
 .card__heading {
@@ -148,6 +153,7 @@ h2 ~ h2 {
 .card p {
   font-size: 1.1rem;
   line-height: 1.3;
+  color: #990c3f;
 }
 
 /**
@@ -155,15 +161,17 @@ h2 ~ h2 {
  */
 
 ::-webkit-scrollbar {
-  height: 1rem;
+  height: 0.8rem;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #cccccc;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.25rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #444444;
+  background: linear-gradient(to bottom, #d81159 0%, #990c3f 100%);
+  border-radius: 0.25rem;
 }
 
 /**
