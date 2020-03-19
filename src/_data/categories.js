@@ -19,6 +19,10 @@ module.exports = {
     {
       title: 'Activities',
       slug: 'activities'
+    },
+    {
+      title: 'Apps',
+      slug: 'apps'
     }
   ],
   ages: [
