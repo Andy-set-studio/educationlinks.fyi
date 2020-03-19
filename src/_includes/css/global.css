@@ -92,6 +92,15 @@ h2 ~ h2 {
 /**
  * Reel component 
  */
+.reel__heading a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+[lang*='en'] .reel__heading a {
+  text-transform: uppercase;
+}
+
 .reel__list {
   display: flex;
   overflow-x: auto;

@@ -12,11 +12,12 @@
 
       {% if collection.length %}
         <article class="reel">
-          <h3>
-            <a href="/category/{{ tag.slug }}">{{ tag.title }}</a>
+          <h3 class="reel__heading">
+            {{ tag.title }}  
+            <a href="/category/{{ tag.slug }}">View all</a>
           </h3>
           <ul class="reel__list">
-            {% for item in collections[tag.slug] %}
+            {% for item in collections[tag.slug] | shuffle %}
               <li class="reel__item">
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
@@ -36,11 +37,12 @@
 
       {% if collection.length %}
         <article class="reel">
-          <h3>
-            <a href="/category/{{ age.slug }}">{{ age.title }}</a>
+          <h3 class="reel__heading">
+            {{ age.title }}  
+            <a href="/category/{{ age.slug }}">View all</a>
           </h3>
           <ul class="reel__list">
-            {% for item in collections[age.slug] %}
+            {% for item in collections[age.slug] | shuffle %}
               <li class="reel__item">
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
