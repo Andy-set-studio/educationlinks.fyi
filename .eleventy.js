@@ -23,8 +23,12 @@ module.exports = config => {
       items[randomIndex] = temporaryValue;
     }
 
-    // Limit response to 1- items
-    return items.slice(0, 10);
+    return items;
+  });
+
+  // A simple limiter
+  config.addFilter('limit', items => {
+    return items.slice(0, 20);
   });
 
   // Pass through
