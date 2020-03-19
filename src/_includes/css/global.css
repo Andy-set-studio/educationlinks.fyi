@@ -1,0 +1,108 @@
+:root {
+  --metric-flow-space: 1em;
+  --metric-gutter: 1.25rem;
+}
+
+body {
+  background: #efefef;
+  color: #252525;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  padding: 2rem 1.5rem;
+  font-size: 1.1rem;
+  font-size: var(--step-1);
+  line-height: 1.5;
+}
+
+main {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+a {
+  color: currentColor;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+:focus {
+  outline: 1px dotted #333333;
+  outline-offset: 0.5rem;
+}
+
+/**
+ * Flow utility and contexts
+ */
+.flow > * + * {
+  margin-top: 1em;
+  margin-top: var(--metric-flow-space);
+}
+
+h2 ~ h2 {
+  --metric-flow-space: var(--step-4);
+}
+
+/**
+ * Reel component 
+ */
+.reel__list {
+  display: flex;
+  overflow-x: auto;
+  position: relative;
+  padding: 0;
+  padding-top: var(--step-1);
+  -webkit-overflow-scrolling: touch;
+}
+
+.reel__item {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0 var(--metric-gutter) var(--metric-gutter) 0;
+  width: 16rem;
+}
+
+.reel__item > * {
+  flex: auto;
+}
+
+[lang*='en'] .reel__heading {
+  text-transform: capitalize;
+}
+
+.reel__action {
+  text-align: center;
+}
+
+/**
+ * Card component 
+ */
+.card {
+  display: block;
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  background: #f3f3f3;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+/**
+ * SCROLLBAR STYLES 
+ */
+
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #cccccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444444;
+}

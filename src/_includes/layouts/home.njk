@@ -1,19 +1,18 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <main>
+  <main class="flow">
     <h1>{{ title }}</h1>
-    
     <h2>Categories</h2>
     {% for tag in categories.tags %}
       {% set collection = collections[tag.slug] %}
 
       {% if collection.length %}
-        <article>
+        <article class="reel">
           <h3>{{ tag.title }}</h3>
-          <ul>
+          <ul class="reel__list">
             {% for item in collections[tag.slug] %}
-              <li>
+              <li class="reel__item">
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
                 {% set cardLink = item.data.link %}
@@ -30,11 +29,11 @@
       {% set collection = collections[age.slug] %}
 
       {% if collection.length %}
-        <article>
+        <article class="reel">
           <h3>{{ age.title }}</h3>
-          <ul>
+          <ul class="reel__list">
             {% for item in collections[age.slug] %}
-              <li>
+              <li class="reel__item">
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
                 {% set cardLink = item.data.link %}
