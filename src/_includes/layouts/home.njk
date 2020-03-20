@@ -17,7 +17,7 @@
             <a href="/category/{{ tag.slug }}">View all</a>
           </h3>
           <ul class="reel__list">
-            {% for item in collections[tag.slug] | shuffle %}
+            {% for item in collections[tag.slug] | shuffle | limit %}
               <li class="reel__item">
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
@@ -42,7 +42,7 @@
             <a href="/category/{{ age.slug }}">View all</a>
           </h3>
           <ul class="reel__list">
-            {% for item in collections[age.slug] | shuffle %}
+            {% for item in collections[age.slug] | shuffle | limit %}
               <li class="reel__item">
                 {% set cardTitle = item.data.title %}
                 {% set cardSummary = item.data.summary %}
