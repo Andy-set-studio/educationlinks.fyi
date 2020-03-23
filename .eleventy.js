@@ -4,6 +4,12 @@ module.exports = config => {
     return collection.getAll().find(x => x.url === '/');
   });
 
+  config.addCollection('items', function(collection) {
+    return collection.getFilteredByGlob('./src/item/*.md').sort(function(a, b) {
+      return b.date - a.date;
+    });
+  });
+
   // Limit feed items and shuffle them so they are random for
   // each build
   config.addFilter('shuffle', items => {
