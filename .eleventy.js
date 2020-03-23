@@ -5,7 +5,9 @@ module.exports = config => {
   });
 
   config.addCollection('items', function(collection) {
-    return collection.getFilteredByGlob('./src/item/*.md');
+    return collection.getFilteredByGlob('./src/item/*.md').sort(function(a, b) {
+      return b.date - a.date;
+    });
   });
 
   // Limit feed items and shuffle them so they are random for
