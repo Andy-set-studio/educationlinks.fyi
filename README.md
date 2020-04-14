@@ -20,7 +20,7 @@ Contributions of **all kinds** will be much appreciated. Please [email me](mailt
 ### To add content
 
 1. Fork this repository
-2. Create a new file inside `src/items`
+2. Create a new file inside `src/item`
 3. Fill out the details. Here's a template
 
 ```yaml
